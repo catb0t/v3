@@ -4,8 +4,4 @@ These awesome people help maintain the Factor track.
 
 ## Senior Maintainers
 
-TODO: add senior maintainers
-
-## Contributing Maintainers
-
-TODO: add contributing maintainers
+- Cat Stevens (Slack: `@catb0t`, GitHub: [catb0t](https://github.com/catb0t))
