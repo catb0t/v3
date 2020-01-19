@@ -1,12 +1,12 @@
 - [Start here](/)
 - Docs
 - [Languages](/languages/README.md)
-  - [C#](/languages/csharp/README.md)
-    - [Docs](/languages/csharp/docs/README.md)
-    - [Exercises](/languages/csharp/exercises/README.md)
-      - [Concept](/languages/csharp/exercises/concept/README.md)
-      - [Practice](/languages/csharp/exercises/practice/README.md)
-    - [Reference](/languages/csharp/reference/README.md)
+  - [C#](/languages/factor/README.md)
+    - [Docs](/languages/factor/docs/README.md)
+    - [Exercises](/languages/factor/exercises/README.md)
+      - [Concept](/languages/factor/exercises/concept/README.md)
+      - [Practice](/languages/factor/exercises/practice/README.md)
+    - [Reference](/languages/factor/reference/README.md)
 - Reference
   - [Concepts](/reference/concepts/README.md)
   - [Paradigms](/reference/paradigms/README.md)

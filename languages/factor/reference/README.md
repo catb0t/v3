@@ -8,16 +8,47 @@ The Factor concept exercises are based on concepts. The list below contains the 
 
 The core features of concatenative language which a Factor developer should know about are:
 
-- [Stack paradigm basics](../../../reference/concepts/stack_paradigm_basics.md)
+- [Anonymous functions](../../../reference/concepts/anonymous_functions.md)
+- [Continuations](../../../reference/concepts/continuations.md)
+- [Function composition](../../../reference/concepts/function_composition.md)
+- [Higher order functions](../../../reference/concepts/higher_order_functions.md)
+- [Homoiconicity](../../../reference/concepts/homoiconicity.md)
+- [Partial application](../../../reference/concepts/partial_application.md)
+- [Pipelines](../../../reference/concepts/pipelines.md)
+- [Stack effects](../../../reference/concepts/stack_effects.md)
+
+### Functional
+
+Factor relies on anonymous functions, called quotations, to generalise procedures with higher-level combining words, called combinators. However, Factor's reference implementation is much more "object-functional" than purely functional.
+
 - [Words and vocabularies](../../../reference/concepts/words_and_vocabularies.md)
+- [Quotations](../../../reference/concepts/quotations.md)
+- [Recursion](../../../reference/concepts/recursion.md)
+- [Immutability](../../../reference/concepts/immutability.md)
+- Combinators
+  - [Fundamental](../../../reference/concepts/combinators/fundamental.md)
+  - Dataflow
+    - [Preserving](../../../reference/concepts/combinators/dataflow/preserving.md)
+    - [Cleave](../../../reference/concepts/combinators/dataflow/cleave.md)
+    - [Spread](../../../reference/concepts/combinators/dataflow/spread.md)
+    - [Apply](../../../reference/concepts/combinators/dataflow/apply.md)
+    - [Curried](../../../reference/concepts/combinators/dataflow/curried.md)
+  - [Conditional](../../../reference/concepts/combinators/conditional.md)
+  - [Looping](../../../reference/concepts/combinators/looping.md)
+  - [Compositional](../../../reference/concepts/combinators/compositional.md)
+  - [Short-circuit](../../../reference/concepts/combinators/short-circuit.md)
+  - [Smart](../../../reference/concepts/combinators/smart.md)
 
 ### Object System
 
 The core object features a Factor developer should know about are:
 
-- [Classes and objects](../../../reference/concepts/classes_and_objects.md)
+- [The basic instances](../../reference/concepts/the_basic_class_instances.md)
+- [Objects](../../../reference/concepts/objects.md)
+- [Classes and instances](../../../reference/concepts/classes_and_instances.md)
 - [Accessors](../../../reference/concepts/accessors.md)
-- [Generic methods](../../../reference/concepts/methods.md)
+- [Generic methods](../../../reference/concepts/generic_methods.md)
+- [Protocols and cascading generics](../../../reference/concepts/protocols_and_cascading_generics.md)
 - [State](../../../reference/concepts/state.md)
 - [Mutation](../../../reference/concepts/mutation.md)
 - [Inheritance](../../../reference/concepts/inheritance.md)
@@ -26,32 +57,21 @@ The core object features a Factor developer should know about are:
 
 The core type system features a Factor developer should know about are:
 
-- [Type vs Class](../../../reference/concepts/type_vs_class.md)
 - [Gradual type checking](../../../reference/concepts/gradual_type_checking.md)
 - [Type conversion](../../../reference/concepts/type_conversion.md)
 - [Underlying types](../../../reference/concepts/underlying_types.md)
 - [Type reflection](../../../reference/concepts/type_reflection.md)
 
-### Functional
-
-Factor relies on anonymous functions, called quotations, to generalise procedures.
-
-- [Quotations](../../../reference/concepts/quotations.md)
-- [Recursion](../../../reference/concepts/recursion.md)
-- [Immutability](../../../reference/concepts/immutability.md)
-
 ### General
 
-- Arithmetic overflow
+The rest of the features a Factor developer should know about are:
+
 - [Sameness](../../../reference/concepts/sameness.md)
-- [Conditionals](../../../reference/concepts/conditionals.md)
-- [Enumeration](../../../reference/concepts/enumeration.md)
-- Exception handling
-- Implicit/explicit conversion
-- Threading
-- Side effects
-- Unsafe code
-- Generalised reflection
+- [Continuations and exceptions](../../../reference/concepts/continuations_and_exceptions.md)
+- [Threading](../../../reference/concepts/threading.md)
+- [Side effects](../../../reference/concepts/side_effects.md)
+- [Unsafe](../../../reference/concepts/unsafe.md)
+- [General Reflection](../../../reference/concepts/general_reflection.md)
 
 ## Concept interpretation
 
@@ -65,14 +85,12 @@ The concept exercises use the following concepts:
 | `basic-sequences`        | Know of the existence of the `sequence` mixin class, the _sequence protocol_, and how to iterate over a sequence.                                                                                                                                                                                                                                                                                  |
 | `basic-assocs`           | Know of the existence of the `assoc` mixin class for associative sequences, the _assoc protocol_, and how to iterate over an assoc.                                                                                                                                                                                                                                                                                  |
 | `basic-hashtables`       | Know of the existence of the `hashtable` class, the _assoc protocol_, and how to iterate over a hashtable.                                                                                                                                                                                                                                                                                  |
-| `basic-enums`            | Know of the existence of the `enum` keyword. Know how to define enum members. Know how to convert a `string` to an `enum` and vice versa. Know where it's documented, or at least how to search for it                                                                                                                  |
-| `advanced-enums`         | Know how to define a "flags" enum. Know how to add, remove or check for flags.                                                                                                                                                                                                                                          |
-| `basic-time`             | Know of the existence of the `DateTime` type. Know of the individual, time-related properties. Know where it's documented, or at least how to search for it.                                                                                                                                                            |
 | `basic-class-conversion` | Know that it is sometimes possible to convert between classes.                                                                                                                                                                                                                                            |
 | `basic-quotations`       | Know of the existence of quotations.                                                                                                                                                                                                                                 |
 | `floating-point-numbers` | Know the difference between the `ratio` and `float` classes. Know when each type appears in a program and when to use each.                                                                                                                                                                                                   |
 | `string-formatting`      | Know how to format a string. Know where it's documented, or at least how to search for it.                                                                                                                                                                                                                              |
 | `bitwise-operations`     | Know how to apply bitwise operations to numbers. Know where it's documented, or at least how to search for it.                                                                                                                                                                                                          |
+| `fundamental-combinators`      | Know how to use basic combinator words to apply higher-order functions (quotations), and how to define your own. |
 | `basic-combinators`      | Know how to use basic combinator words to apply higher-order functions (quotations), and how to define your own. |
 | `conditional-combinators` | Know how to use combinators to perform conditional logic with quotations, and how to define your own. |
 | `sequence-combinators`   | Know how to use combinators to operate on sequences with quotations, and how to define your own. |
@@ -90,6 +108,8 @@ Reference docs are written to help explain a particular Factor concept to a stud
 
 The following reference docs have been written:
 
+- [Code style][code_style]
+- [Type vs Class](../../../reference/concepts/type_vs_class.md)
 
 ## TODO
 
@@ -98,7 +118,6 @@ The following reference docs have been written:
 [issues-improve-reference]: https://github.com/exercism/v3/issues?q=is%3Aissue+is%3Aopen+label%3Atrack%2Ffactor+label%3Atype%2Fimprove-reference+label%3Astatus%2Fhelp-wanted
 [issues-new-reference]: https://github.com/exercism/v3/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Atrack%2Ffactor+label%3Atype%2Fnew-reference+label%3Astatus%2Fhelp-wanted+
 [code_style]: ./code_style.md
-[memory_allocation]: ./memory_allocation.md
 [bool]: ../../../reference/types/boolean.md
 [string]: ../../../reference/types/string.md
 [char]: ../../../reference/types/char.md

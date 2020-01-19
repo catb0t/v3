@@ -1,16 +1,14 @@
 # How to implement a Factor concept exercise
 
-TODO: describe how to implement a concept exercise for the Factor track. For inspiration, check out the [C# version of this file][csharp-implementing].
 This document describes how to implement a concept exercise for the Factor track. As this document is generic, the following placeholders are used:
 
-- `<SLUG>`: the name of the exercise in kebab-case (e.g. `basic-numbers`).
-- `<NAME>`: the name of the exercise in PascalCase (e.g. `BasicNumbers`).
+- `<SLUG>`: the name of the exercise in kebab-case (e.g. `sequence-protocol`).
 
 Before implementing the exercise, please make sure you have a good understanding of what the exercise should be teaching (and what not). This information can be found in the exercise's GitHub issue. Having done this, please read the [Factor concept exercises introduction][concept-exercises].
 
 To implement a concept exercise, the following files must be created:
 
-<pre>
+<pre><code>
 languages
 └── factor
     └── exercises
@@ -22,12 +20,11 @@ languages
                 |   ├── hints.md
                 |   └── after.md (optional)
                 ├── .meta
-                |   ├── config.json
-                |   └── Example.cs
-                ├── &lt;NAME&gt;.cs
-                ├── &lt;NAME&gt;.csproj
-                └── &lt;NAME&gt;Test.cs
-</pre>
+                |   |── design.md
+                |   └── example.factor
+                ├── &lt;SLUG&gt;.factor
+                └── &lt;SLUG&gt;-tests.factor
+</code></pre>
 
 ## Step 1: adding track-specific files
 
@@ -35,7 +32,7 @@ These files are specific to the Factor track:
 
 - `<SLUG>.factor`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<SLUG>-tests.factor`: the test suite.
-- `.meta/<SLUG>.factor`: an example implementation that passes all the tests.
+- `.meta/example.factor`: an example implementation that passes all the tests.
 
 ## Step 2: adding common files
 
@@ -51,7 +48,7 @@ Some exercises could benefit from having an custom representation as generated b
 
 ## Inspiration
 
-When implementing an exercise, it can be very useful to look at already implemented Factor exercises like the [strings][concept-exercise-strings], [dates][concept-exercise-dates] or [floating-point numbers][concept-exercise-floating-point-numbers] exercises. You can also check the exercise's [general concepts documents][reference] to see if other languages have already implemented an exercise for that concept.
+When implementing an exercise, it can be very useful to look at already implemented Factor exercises like [..]. You can also check the exercise's [general concepts documents][reference] to see if other languages have already implemented an exercise for that concept.
 
 ## Help
 
@@ -61,8 +58,4 @@ If you have any questions regarding implementing the exercise, please post them 
 [representer]: https://github.com/exercism/factor-representer
 [concept-exercises]: ../exercises/concept/README.md
 [how-to-implement-a-concept-exercise]: ../../../docs/maintainers/generic-how-to-implement-a-concept-exercise.md
-[concept-exercise-strings]: ../exercises/concept/strings
-[concept-exercise-dates]: ../exercises/concept/dates
-[concept-exercise-floating-point-numbers]: ../exercises/concept/numbers-floating-point
 [reference]: ../../../reference
-[csharp-implementing]: ../../csharp/docs/implementing-a-concept-exercise.md

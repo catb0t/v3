@@ -1,4 +1,4 @@
-# C&#35; exercises
+# Factor exercises
 
 There are two types of exercises:
 

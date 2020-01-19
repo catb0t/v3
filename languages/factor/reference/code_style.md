@@ -2,7 +2,7 @@
 
 While the Factor parser doesn't enforce a particular code style, there are general [conventions](article-conventions) for terminology and word names.
 
-Words, classes, constants, and so on are usually in `kebab-case`, except names from the C and C++ [`alien`][vocab-alien] interface, which obviously cannot be `kebab-case`.
+Words, classes, constants, and so on are usually in `kebab-case`, except names from the C and C++ [`alien`][vocab-alien] interface, which obviously cannot be `kebab-case`, and are usually `snake_case`.
 
 Rarely, words are defined with `PascalCase`, `camelCase`, or `UPPERCASE` names, usually to mirror domain-specific naming conventions. For example, the [`cocoa.types`][vocab-cocoa.types] vocabulary defines words such as `NSNotFound` and `NSFastEnumerationState`. The [`->`][hyphen-gt] word is implemented by the [`cocoa`][vocab-cocoa] vocabulary to look like Objective C, and by the [`graphviz`][vocab-graphviz] vocabulary to implement `add-edge` while looking like the Graphviz DOT language.
 
@@ -10,10 +10,13 @@ Rarely, words are defined with `PascalCase`, `camelCase`, or `UPPERCASE` names, 
 
 Factor formatting conventions are mostly derived from the Factor implementation's code formatting. Specifically,
 
-- Lines following the first line of a definition are indented by either 2 or 4 spaces (4 for the Factor codebase), except the bodies of `HELP:`, `ARTICLE:` and `ABOUT:` help definitions and `USING:` syntax, which are not indented:
+- Declarations are separated by one (or more) blank line(s).
+
+- Lines following the first line of a definition are indented by either 2 or 4 spaces (4 for the Factor codebase), except the bodies of `HELP:`, `ARTICLE:`, and `ABOUT:` help definitions, and `USING:` syntax, which are not indented:
   ```factor
   USING: accessors arrays combinators kernel locals math
   math.order sequences sequences.private vectors ;
+
   : x ( y z -- a )
       [ / ] [ + ] bi * ;
 
@@ -32,7 +35,7 @@ Factor formatting conventions are mostly derived from the Factor implementation'
   ABOUT: "code-style"
   ```
 
-- The indentation level grows each time the contents of a quotation or other literal appear on a line other than the line on which it started:
+- The indentation level increases if a quotation or other literal is broken over multiple lines:
   ```factor
   [ a quotation ] [
       another quotation
@@ -40,11 +43,13 @@ Factor formatting conventions are mostly derived from the Factor implementation'
           1
           2
           3
-      } some words
+      } some words V{
+        vector data
+      }
   ]
   ```
 
-- A Factor program or script file should typically have the following overall layout (`USING` and imports, `IN`, `CONSTANT` and static definitions, private word definitions, public interface words, `MAIN`):
+- A Factor program or script file should typically have the following overall ordered layout: `USING` and imports, `IN`, `CONSTANT` and static definitions, private word definitions, public interface words, and finally `MAIN`:
   ```factor
   USING: accessors arrays combinators kernel locals math
   math.order sequences sequences.private vectors ;
