@@ -25,8 +25,7 @@ Applicative languages may be any or none of the following:
 Concepts that are integral to the applicative model:
 
 - [Assignment](../concepts/scope.md)
-- [Evaluation direction](../concepts/evaluation_direction.md)
-- [Operators](../concepts/evaluation_direction.md)
-- [Return values](../concepts/evaluation_direction.md)
+- [Operators](../concepts/operators.md)
+- [Return values](../concepts/operators.md)
 - [Scope](../concepts/scope.md)
-- [Variables](../concepts/evaluation_direction.md)
+- [Variables](../concepts/operators.md)

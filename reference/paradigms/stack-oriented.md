@@ -1,6 +1,6 @@
 # Stack-oriented programming
 
-Stack-oriented programming relies on a [data (or operand) stack](../concepts/data_stack.md) as the primary set of values upon which almost all operations and evaluations are performed.
+Stack-oriented programming relies on a [data (or operand) stack](../concepts/data_stack.md) as the primary set of values upon which almost all operations and evaluations are performed. In a stack language, the *entire program* is a [pipeline](../concepts/pipelines.md).
 
 Many programming languages, including non-stack-oriented ones, use _call stacks_ as an implementation detail to allow recursion and exception handling, but these are distinct from the _data stack_.
 

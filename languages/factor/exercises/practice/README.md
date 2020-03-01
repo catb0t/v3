@@ -1,4 +1,4 @@
-# C&#35; practice exercises
+# Factor practice exercises
 
 Practice Exercises are exercises that help one dig a bit deeper into concepts that one has learnt through Concept Exercises.
 

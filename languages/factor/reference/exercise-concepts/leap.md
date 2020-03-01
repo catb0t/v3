@@ -5,10 +5,10 @@
 ## General
 
 - basic generics: `odd?`, `mod`, `>`, and `zero?` with `MATH:`
-- cascading generics: high-level code becomes free of types and type guards
-- basic instances: booleans, t and f
+- protocols/generics: high-level code becomes free of types and type guards
+- basic instances: booleans, `t` and `f`
 - stack effects: boolean value names
-- boolean inclusive logic: or, and
+- boolean inclusive logic: `or`, `and`
 - conditional combinators: `if`, with two quotation inputs
 
 ## Approach: cleanest

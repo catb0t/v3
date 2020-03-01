@@ -14,6 +14,11 @@ The core features of concatenative language which a Factor developer should know
 - [Higher order functions](../../../reference/concepts/higher_order_functions.md)
 - [Homoiconicity](../../../reference/concepts/homoiconicity.md)
 - [Partial application](../../../reference/concepts/partial_application.md)
+
+### Stack-oriented
+
+These may seem to be concatenative features, but they are only fundamental to *stack-oriented* concatenative languages, like Factor.
+
 - [Pipelines](../../../reference/concepts/pipelines.md)
 - [Stack effects](../../../reference/concepts/stack_effects.md)
 
@@ -57,8 +62,8 @@ The core object features a Factor developer should know about are:
 
 The core type system features a Factor developer should know about are:
 
-- [Gradual type checking](../../../reference/concepts/gradual_type_checking.md)
 - [Type conversion](../../../reference/concepts/type_conversion.md)
+- [Gradual type checking](../../../reference/concepts/gradual_type_checking.md)
 - [Underlying types](../../../reference/concepts/underlying_types.md)
 - [Type reflection](../../../reference/concepts/type_reflection.md)
 

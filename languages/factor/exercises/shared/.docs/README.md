@@ -1,9 +1,9 @@
-# C&#35; shared exercise documents
+# Factor; shared exercise documents
 
 There are two documents that are shared between all exercises:
 
-- [cli.md][cli]: contains information on how to work with the exercise when using the CLI to download and submit the exercise.
-- [debug.md][debug]: explains how a user that is coding in the browser can still do "debugging."
+- [testing.md][testing]: contains information on how to work with the exercise when using the CLI to download and submit the exercise.
+- [debugging.md][debugging]: debugging help.
 
-[cli]: ./cli.md
-[debug]: ./debug.md
+[testing]: ./cli.md
+[debugging]: ./debug.md
